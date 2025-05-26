@@ -52,3 +52,31 @@ Response body
     "interestId": 4  
   }  
 ]  
+
+4. HttpGet (Name = "GetAllPeople") - Get all people  
+   200	  
+Response body  
+[  
+  {  
+    "id": 1,  
+    "name": "Anna Svensson",  
+    "phone": "0701234567"  
+  },  
+  {  
+    "id": 2,  
+    "name": "Erik Karlsson",  
+    "phone": "0737654321"  
+  }  
+
+]  
+
+5. HttpPost("{personId}/linkToPersonInterest") - Add link to person and interest  
+   curl -X 'POST' \  
+  'https://localhost:7181/api/Link/2/linkToPersonInterest' \  
+  -H 'accept: */*' \  
+  -H 'Content-Type: application/json' \  
+  -d '{  
+  "url": "www.exempelvis.se",  
+  "interestId": 2  
+
+response ok 
