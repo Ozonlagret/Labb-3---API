@@ -1,6 +1,5 @@
-HttpGet("{personId}/Getinterests") - Hämta alla intressen per person
+HttpGet("{personId}/Getinterests") - Hämta alla intressen per person  
 Response body  
-Download  
 [  
   {  
     "id": 2,  
@@ -18,3 +17,13 @@ Download
     "description": "234235"  
   }  
 ]  
+  
+HttpPost("{personId}/addInterest") - Lägg till intresse och länka till person  
+curl -X 'POST' \  
+  'https://localhost:7181/api/Interest/2/addInterest' \  
+  -H 'accept: */*' \  
+  -H 'Content-Type: application/json' \  
+  -d '{  
+  "title": "Skidåkning",  
+  "description": "Åka skidor"  
+}'  
