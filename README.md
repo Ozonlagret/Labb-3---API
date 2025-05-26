@@ -29,7 +29,7 @@ curl -X 'POST' \
 }'  
 Responses code 200
 
-HttpGet("{personId}/getLinksByPerson") - Get all links by person  
+3. HttpGet("{personId}/getLinksByPerson") - Get all links by person  
 200  	 
 Response body  
 [  
