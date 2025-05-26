@@ -1,4 +1,4 @@
-HttpGet("{personId}/Getinterests") - Hämta alla intressen per person  
+1. HttpGet("{personId}/Getinterests") - Get all interests by person  
 Response body  
 [  
   {  
@@ -18,7 +18,7 @@ Response body
   }  
 ]  
   
-HttpPost("{personId}/addInterest") - Lägg till intresse och länka till person  
+2. HttpPost("{personId}/addInterest") - Add an interest and link it to a person  
 curl -X 'POST' \  
   'https://localhost:7181/api/Interest/2/addInterest' \  
   -H 'accept: */*' \  
@@ -27,3 +27,28 @@ curl -X 'POST' \
   "title": "Skidåkning",  
   "description": "Åka skidor"  
 }'  
+Responses code 200
+
+HttpGet("{personId}/getLinksByPerson") - Get all links by person  
+200  	 
+Response body  
+[  
+  {  
+    "id": 3,  
+    "url": "https://www.stackoverflow.com",  
+    "personId": 2,  
+    "interestId": 2  
+  },  
+  {  
+    "id": 4,  
+    "url": "https://www.tasteline.se",  
+    "personId": 2,  
+    "interestId": 3  
+  },  
+  {  
+    "id": 5,  
+    "url": "www.exempel.nu",  
+    "personId": 2,  
+    "interestId": 4  
+  }  
+]  
